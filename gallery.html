@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery & Reviews</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
+
+    <!-- jQuery Validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+    <!-- Lightbox -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+    <!-- My Script -->
+    <script src="scripts/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Pet Community Gallery & Reviews</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="calendar.html">Appointments</a>
+    <a href="contact.html">Contact</a>
+    <a href="gallery.html">Reviews & Community</a>
+</nav>
+
+<div class="page-wrapper">
+
+    <main>
+
+    <div class="split-container">
+
+        <div class="split-column" id="gallery-section">
+
+            <h3>Pet Photo Gallery</h3>
+            <p>View shared pet photos below or upload your own!</p>
+
+            <form id="uploadForm">
+                <label>Upload a Pet Photo:</label>
+                <input type="file" id="imageUpload" accept="image/*">
+                <button type="submit">Add to Gallery</button>
+            </form>
+
+            
+
+            <h4>Gallery</h4>
+
+            <!-- Container for JavaScript to populate once user adds an image -->
+            <div id="galleryGrid" class="gallery">
+                <!-- While these placeholders are no longer needed I am leaving them here as examples -->
+                <!-- <div class="gallery">
+                    <a href="images/mimi-goats.jpg" data-lightbox="pets">
+                        <img src="images/mimi-goats.jpg" alt="Pet">
+                    </a>
+
+                    <a href="images/mimi-cat.jpg" data-lightbox="pets">
+                        <img src="images/mimi-cat.jpg" alt="Cat">
+                    </a>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="split-column" id="reviews-section">
+
+            <h3>Customer Reviews</h3>
+            <p>Read what others are saying or leave your own review.</p>
+
+            <form id="reviewForm">
+
+                <div class="form-row">
+                    <label for="reviewer">Your Name:</label>
+                    <input type="text" id="reviewer" name="reviewer" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="reviewText">Your Review:</label>
+                    <textarea id="reviewText" name="reviewText" required minlength="10"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label for="rating">Rating (1-5):</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">Select</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+
+                <button type="submit">Post Review</button>
+
+            </form>
+
+            <h4>Current Reviews</h4>
+        
+            <!-- Container for JavaScript to populate when user submits a reivew -->
+            <div id="reviewsContainer">
+
+                <!-- While these placeholders are no longer needed I am leaving them here as examples -->
+                <!-- <div class="review-box">
+                    <strong>Emily R.</strong><br>
+                    <img src="images/star.png" class="star">
+                    <img src="images/star.png" class="star">
+                    <img src="images/star.png" class="star">
+                    <img src="images/star.png" class="star">
+                    <img src="images/star.png" class="star">
+                    <p>My dog Max loved staying with her! Highly recommend.</p>
+                </div>
+
+                <div class="review-box">
+                    <strong>Jason M.</strong><br>
+                    <img src="images/star.png" class="star">
+                    <img src="images/star.png" class="star">
+                    <img src="images/star.png" class="star">
+                    <img src="images/star.png" class="star">
+                    <p>Very kind and caring. Will book again!</p>
+                </div> -->
+
+            </div>
+        </div>
+
+    </div>
+
+    </main>
+
+</div>
+
+<footer>
+    <p>© 2026 Annie's Animals</p>
+</footer>
+
+</body>
+</html>

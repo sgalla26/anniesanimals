@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment Calendar</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
+
+    <!-- jQuery Validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+    <!-- Lightbox -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+    <!-- My Script -->
+    <script src="scripts/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Book an Appointment</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="calendar.html">Appointments</a>
+    <a href="contact.html">Contact</a>
+    <a href="gallery.html">Reviews & Gallery</a>
+</nav>
+
+<div class="page-wrapper">
+
+    <div class="page-container">
+
+        <main>
+            <h2>Check Availability</h2>
+            <p>Use this calendar to check for available dates:</p>
+
+            <!-- Obtained from Google Calendar for embed -->
+            <div class="calendar-container">
+                <iframe 
+                    src="https://calendar.google.com/calendar/embed?src=5179b346a26ffdd925778896d559389c11ac85650e55ef0aed7a37a80adb6709%40group.calendar.google.com&ctz=America%2FNew_York" 
+                    style="border: 0"
+                    frameborder="0" 
+                    scrolling="no">
+                </iframe>
+            </div> 
+
+            <h3>Request Appointment</h3>
+            <p>Find an available date from the calendar and request and appointment here.
+                All requests go to my email where I can approve them and add them to my calendar. If you want to contact me
+                for non-appointment related things, click <a href="contact.html">here</a>.
+            </p>
+            <p>Please understand appointments are not guarenteed and things are subject to change at any time.</p>
+
+            <form id="apptForm">
+                <!-- Put every input/label in a div so it could be formatted the way I wanted it -->
+                <div class="form-row">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="petType">Pet Type:</label>
+                    <select id="petType" name="petType" required>
+                        <option value="">-- Select One --</option>
+                        <option>Dog</option>
+                        <option>Cat</option>
+                        <option>Rabbit</option>
+                        <option>Goat</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <!-- This is the part that uses jQuery Datepicker to present the calendar UI for consistency across devices -->
+                <div class="form-row">
+                    <label for="appointmentDate">Select Appointment Date:</label>
+                    <input type="text" id="appointmentDate" name="appointmentDate" required>
+                </div>
+
+                <button type="submit">Submit Request</button>
+
+            </form>
+
+        </main>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Annie's Animals</p>
+</footer>
+
+</body>
+</html>
